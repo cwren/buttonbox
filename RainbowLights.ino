@@ -224,7 +224,7 @@ void set_lamps() {
 
 void rainbow() { 
   uint16_t step = 2 * HUE_MAX / LIGHT_COUNT;
-  for(int i = 0; i < GRID_COUNT; i++) {
+  for(int i = 0; i < LIGHT_COUNT; i++) {
     color_t color = lights.color_hue(((i + c) * step) % (HUE_MAX + 1));
     lights.set_color(i, G35::MAX_INTENSITY, color);
   }
